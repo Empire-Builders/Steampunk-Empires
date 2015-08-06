@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Main Game Scripts\Army\Army.cs" />
+     <Compile Include="Assets\Scripts\Main Game Scripts\Army\Unit.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\Barracks.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\Building.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\GoldPit.cs" />
