@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Headquarters : Building {
+public class TownHall : Building {
 
-	public Headquarters(int level)
+	public TownHall(int level)
 	{
 		Level = level;
 	}

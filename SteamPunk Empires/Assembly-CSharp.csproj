@@ -46,15 +46,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Army\Army.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Army\Unit.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\Barracks.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\Building.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\GoldPit.cs" />
-     <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\Headquarters.cs" />
+     <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\TownHall.cs" />
+     <Compile Include="Assets\Scripts\Main Game Scripts\UI\GoldDisplay.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Village.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Scene Transitions\LoadOnClick.cs" />
+     <Compile Include="Assets\Scripts\Scene Transitions\VillageLoad.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

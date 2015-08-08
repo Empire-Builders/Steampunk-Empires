@@ -2,45 +2,31 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Village : MonoBehaviour{
+public class Village{
 
-	public Headquarters headquarters;
+	public TownHall townhall;
 	public Barracks barracks;
 	public GoldPit goldPit;
 	public Army army;
+	public Button goldDisplay;
 	public int population;
 	public int gold;
-	public Button goldDisplay;
+	public int villageNo;
+	public string owner;
 
-	void Start()
+	public Village(int VillageNo)
 	{
-		headquarters = new Headquarters (1);
+		townhall = new TownHall (1);
 		barracks = new Barracks (1);
 		goldPit = new GoldPit (1);
 		army = new Army ();
 		population = 0;
-		gold = 13;
+		gold = 100;
+		villageNo = VillageNo;
 	}
-
-	void Awake () {
-		DontDestroyOnLoad (transform.gameObject);
-	}
-
-	void Update()
-	{
-		UpdateGold ();
-	}
-
 
 	public int points()
 	{
-		return headquarters.Level + goldPit.Level + barracks.Level;
+		return townhall.Level + goldPit.Level + barracks.Level;
 	}
-
-	private void UpdateGold()
-	{
-		
-	}
-
-
 }
