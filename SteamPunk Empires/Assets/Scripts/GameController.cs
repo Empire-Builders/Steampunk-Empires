@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
 
 	public Village[] villages;
 	public int currentVillage;
+    public TimingMananger timingManager;
 
 	void Awake () 
 	{
@@ -33,4 +34,11 @@ public class GameController : MonoBehaviour {
 	{
 		return villages [i];
 	}
+
+    void Update()
+    {
+        foreach (Village village in villages)
+            village.Update();
+    }
+
 }

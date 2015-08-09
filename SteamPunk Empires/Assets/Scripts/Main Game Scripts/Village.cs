@@ -6,7 +6,7 @@ public class Village{
 
 	public TownHall townhall;
 	public Barracks barracks;
-	public GoldPit goldPit;
+	public GoldMine goldMine;
 	public Army army;
 	public Button goldDisplay;
 	public int population;
@@ -14,19 +14,33 @@ public class Village{
 	public int villageNo;
 	public string owner;
 
+    private TimingMananger timingManager;
+
 	public Village(int VillageNo)
 	{
 		townhall = new TownHall (1);
 		barracks = new Barracks (1);
-		goldPit = new GoldPit (1);
+		goldMine= new GoldMine (29);
 		army = new Army ();
 		population = 0;
 		gold = 100;
 		villageNo = VillageNo;
+        timingManager = new TimingMananger(villageNo);
 	}
+
+	public void Update()
+	{
+		gold += goldMine.AddGold ();
+        timingManager.Update();
+	}
+
+    public void Ugrade(Building building, float time)
+    {
+        timingManager.UpgradeBuilding(building, time);
+    }
 
 	public int points()
 	{
-		return townhall.Level + goldPit.Level + barracks.Level;
+		return townhall.Level + goldMine.Level + barracks.Level;
 	}
 }

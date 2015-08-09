@@ -51,13 +51,16 @@
      <Compile Include="Assets\Scripts\Main Game Scripts\Army\Unit.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\Barracks.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\Building.cs" />
-     <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\GoldPit.cs" />
+     <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\GoldMine.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Buildings\TownHall.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\UI\GoldDisplay.cs" />
+     <Compile Include="Assets\Scripts\Main Game Scripts\UI\LevelDisplayUpdater.cs" />
+     <Compile Include="Assets\Scripts\Main Game Scripts\UI\LevelUpController.cs" />
      <Compile Include="Assets\Scripts\Main Game Scripts\Village.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Scene Transitions\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\Scene Transitions\VillageLoad.cs" />
+     <Compile Include="Assets\Scripts\TimingMananger.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

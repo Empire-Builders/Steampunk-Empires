@@ -8,13 +8,4 @@ public class TownHall : Building {
 		Level = level;
 	}
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Barracks : Building {
-		
+
 	public Barracks(int level)
 	{
 		Level = level;
