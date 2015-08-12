@@ -4,5 +4,6 @@ using System.Collections;
 public class Building{
 
     public int Level;
+    public int MaxLevel;
 }
 

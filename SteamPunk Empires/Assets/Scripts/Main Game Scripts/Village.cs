@@ -20,7 +20,7 @@ public class Village{
 	{
 		townhall = new TownHall (1);
 		barracks = new Barracks (1);
-		goldMine= new GoldMine (29);
+		goldMine= new GoldMine (30);
 		army = new Army ();
 		population = 0;
 		gold = 100;

@@ -16,7 +16,7 @@ public class GoldMine : Building {
 	{
 		if (timeForGold <= 0)
         {
-			goldToAdd = 1;
+            goldToAdd = Level;
 			timeForGold = TimeTillNextGold();
 		} 
 
@@ -28,8 +28,10 @@ public class GoldMine : Building {
         return goldToAdd;
 	}
 
-	private int TimeTillNextGold()
+	private float TimeTillNextGold()
 	{
-		return (30 - Level);
+        float miningSpeed = (float)Level;
+        float miningTime = (31 - Level)/30;
+		return (miningTime);
 	}
 }
