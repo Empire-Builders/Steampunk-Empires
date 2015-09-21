@@ -1,11 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Main Game Scripts\UI\LevelUpController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Main Game Scripts\Army\Airship.cs">
     <Files>
-      <File FileName="Assets\Scripts\Main Game Scripts\Buildings\GoldMine.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main Game Scripts\UI\TroopDisplayUpdater.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main Game Scripts\UI\UnitBuildingController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Main Game Scripts\Village.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Main Game Scripts\UI\LevelDisplayUpdater.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Main Game Scripts\UI\LevelUpController.cs" Line="46" Column="25" />
+      <File FileName="Assets\Scripts\TimingMananger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main Game Scripts\Buildings\Building.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main Game Scripts\UI\LevelUpController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main Game Scripts\Army\Army.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main Game Scripts\Army\Unit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main Game Scripts\Army\SteamSoldier.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main Game Scripts\Army\Airship.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

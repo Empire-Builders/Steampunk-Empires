@@ -9,6 +9,6 @@ public class GoldDisplay : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		button.GetComponentInChildren<Text>().text = "Gold: " + GameController.control.getVillage(GameController.control.currentVillage).gold.ToString();
+        button.GetComponentInChildren<Text>().text = "Gold: " + GameController.control.getVillage(GameController.control.currentVillage).gold.ToString("n0");
 	}
 }

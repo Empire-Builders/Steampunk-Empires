@@ -3,18 +3,12 @@ using System.Collections;
 
 public class Army{
 
-	public Unit steamSoldier;
-	public Unit airship;
-	public int quantityOfSteamSoldier;
-	public int quantityOfArships;
+	public SteamSoldier steamSoldier;
+	public Airship airship;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public Army()
+    {
+        steamSoldier = new SteamSoldier();
+        airship = new Airship();
+    }
 }

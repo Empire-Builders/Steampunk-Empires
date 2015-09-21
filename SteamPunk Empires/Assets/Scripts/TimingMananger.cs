@@ -4,8 +4,13 @@ using System.Collections;
 public class TimingMananger {
 
     private Building buildingBeingUpgraded;
+    private Unit unitBeingBuilt;
     private bool isBuildingUpgrading;
+    private bool isBuildingUnits;
     private float timeToFinishUpgrading;
+    private float timeToFinishBuildingUnit;
+    private float buildTimePerUnit;
+    private int unitsToFinish;
     private Village village;
 
     public TimingMananger(int villageNumber)
@@ -29,6 +34,29 @@ public class TimingMananger {
                 LevelUpController.Leveller.DisplayTimeRemaining(buildingBeingUpgraded, timeToFinishUpgrading);
             }
         }
+        if (isBuildingUnits)
+        {
+            if(timeToFinishBuildingUnit <= 0)
+            {
+                if (unitsToFinish == 0)
+                {
+                    isBuildingUnits = false;
+                    unitBeingBuilt.quantityOfUnit += 1;
+                    UnitBuildingController.Builder.ResetText(unitBeingBuilt);
+                }
+                else 
+                {
+                    unitsToFinish -= 1;
+                    timeToFinishUpgrading = buildTimePerUnit;
+                    unitBeingBuilt.quantityOfUnit += 1;
+                }
+            }
+            else 
+            {
+                timeToFinishUpgrading -= Time.deltaTime;
+                UnitBuildingController.Builder.DisplayTimeAndNumberRemaining(unitBeingBuilt, unitsToFinish, timeToFinishBuildingUnit);
+            }
+        }
 	}
 
     public void UpgradeBuilding(Building building, float timeToUpgrade)
@@ -36,5 +64,13 @@ public class TimingMananger {
         isBuildingUpgrading = true;
         timeToFinishUpgrading = timeToUpgrade;
         buildingBeingUpgraded = building;
+    }
+
+    public void BuildUnits(Unit unit, int numberToBuild, float timePerUnit)
+    {
+        isBuildingUnits = true;
+        unitBeingBuilt = unit;
+        unitsToFinish = numberToBuild;
+        buildTimePerUnit = timePerUnit;
     }
 }

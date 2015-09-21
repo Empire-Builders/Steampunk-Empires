@@ -14,7 +14,7 @@ public class LevelUpController : MonoBehaviour {
     private Image workingImage;
     private bool updating;
 
-    void Awake () 
+    void Start () 
     {
         Leveller = this;
         setVillage();
@@ -40,30 +40,42 @@ public class LevelUpController : MonoBehaviour {
     {
         if (!updating)
         {
-            village.Ugrade(village.townhall, 10);
-            workingImage = UpdateTownHallButton;
+            if (village.CanAfford(village.townhall))
+            {
+                village.Ugrade(village.townhall, village.townhall.TimeCostToLevel());
+                village.gold -= village.townhall.GoldCostToLevel();
+                workingImage = UpdateTownHallButton;
+                updating = true;
+            }
         }
-        updating = true;
     }
 
     public void UpgradeBarracks()
     {
         if (!updating)
         {
-            village.Ugrade(village.barracks, 10);
-            workingImage = UpdateBarracksButton;
+            if (village.CanAfford(village.barracks))
+            {
+                village.Ugrade(village.barracks, village.barracks.TimeCostToLevel());
+                village.gold -= village.barracks.GoldCostToLevel();
+                workingImage = UpdateBarracksButton;
+                updating = true;
+            }
         }
-        updating = true;
     }
 
     public void UpgradeGoldMine()
     {
         if (!updating)
         {
-            village.Ugrade(village.goldMine, 2);
-            workingImage = UpdateGoldMineButton;
+            if (village.CanAfford(village.barracks))
+            {
+                village.Ugrade(village.goldMine, village.goldMine.TimeCostToLevel());
+                village.gold -= village.goldMine.GoldCostToLevel();
+                workingImage = UpdateBarracksButton;
+                updating = true;
+            }
         }
-        updating = true;
     }
 
     public void ResetText(Building buildingFinishedUpgrading)

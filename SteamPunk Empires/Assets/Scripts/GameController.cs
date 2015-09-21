@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour {
 		{
 			DontDestroyOnLoad (gameObject);
 			control = this;
+            Setup();
 		} 
 		else if (control != this) 
 		{
@@ -22,12 +23,13 @@ public class GameController : MonoBehaviour {
 		}
 	}
 	// Use this for initialization
-	void Start () {
+	private void Setup () {
 		villages = new Village[4];
 		villages[0] = new Village (0);
 		villages[1] = new Village (1);
 		villages[2] = new Village (2);
 		villages[3] = new Village (3);
+        currentVillage = 0;
 	}
 	
 	public Village getVillage(int i)
